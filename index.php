@@ -15,4 +15,3 @@ var_dump($prod);
 
 // $manager->ajouter($prod);
 
-// Hello guys
