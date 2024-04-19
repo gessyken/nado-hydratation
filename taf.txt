@@ -1,0 +1,2 @@
+=> Ecrire la methode all() : Qui va retourner l'ensemble des produits en BD 
+	sous forme de tableau de Produit.
