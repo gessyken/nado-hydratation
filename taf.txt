@@ -1,2 +1,18 @@
 => Ecrire la methode all() : Qui va retourner l'ensemble des produits en BD 
 	sous forme de tableau de Produit.
+
+=> Creer un dossier [ken]. Dans lequel il y'aura deux fichier User.php ayant une classe User (id, email, mot_de_passe) et UserManager.php ayant la classe UserManager.
+Le principe sera le meme qu'avec les produits (Le manager gere la communication avec la BD et User ...).
+
+	* User
+		+ constructeur
+		+ toString 
+	* UserManager.php
+		+ ajouter (User) => Cree un User en BD 
+		+ recuperer (id) => Retourner un User
+		+ modifier (User, email, mdp) => Met a jour les infos du User avec les valeurs passees dans le tableau.
+		+ delete (id) => Supprimer l'utilisateur.
+		+ all() => retourne tous les users.
+
+		$manager->($user, $email, $mdp);
+

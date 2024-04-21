@@ -1,5 +1,7 @@
 <?php
 
+namespace Ken;
+
 class Produit
 {
 	public int $id;

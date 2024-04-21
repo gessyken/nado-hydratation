@@ -1,12 +1,14 @@
 <?php
 
-require_once 'Produit.php';
+namespace Ken;
+
+use Ken\Produit;
 
 class ProduitManager 
 {
-	protected PDO $database;
+	protected \PDO $database;
 
-	public function __construct(PDO $db)
+	public function __construct(\PDO $db)
 	{
 		$this->database = $db;
 	}
@@ -34,7 +36,7 @@ class ProduitManager
 			$stmt = $this->database->query($sql);
 			if ($stmt->rowCount() > 0) 
 			{
-				$data = $stmt->fetchAll(PDO::FETCH_ASSOC)[0];
+				$data = $stmt->fetchAll(\PDO::FETCH_ASSOC)[0];
 			}
 			else
 			{
@@ -54,7 +56,7 @@ class ProduitManager
 		try 
 		{
 			$stmt = $this->database->query($sql);
-			$data = $stmt->fetchAll(PDO::FETCH_ASSOC);
+			$data = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 
 			$produits = [];
 
