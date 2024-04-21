@@ -48,21 +48,22 @@ class ProduitManager
 
 	}
 
-	public function All()
+	public function all()
 	{
 		$sql= " SELECT * FROM produits";
 		try 
 		{
 			$stmt = $this->database->query($sql);
-			$data =$stmt->fetchAll(PDO::FETCH_ASSOC);
+			$data = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+			$produits = [];
+
 				foreach ($data as $produit)
 				{
-					echo "<tr>";
-					echo "<td>".$produit['id']."</td>";
-					echo "<td>".$produit['nom']."</td>";
-					echo "<td>".$produit['prix']."</td>";
-					echo "</tr>";
+					$produits[] = new Produit($produit['id'], $produit['nom'], $produit['prix']);
 				}
+
+				return $produits;
 		} 
 		catch(Exception $e)
 			{

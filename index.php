@@ -12,6 +12,7 @@ $manager = new ProduitManager($db);
 // $prod = $manager->recuperer(3);
 // $prod = $manager->recuperer(3);
 // var_dump($prod);
-$manager->All();
+$produits = $manager->all();
+print_r($produits);
 // $manager->ajouter($prod);
 
